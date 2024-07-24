@@ -12,6 +12,8 @@ return {
   -- add gruvbox
   { "ellisonleao/gruvbox.nvim" },
 
+  { "lukas-reineke/indent-blankline.nvim", opts = {} },
+
   -- Configure LazyVim to load gruvbox
   {
     "LazyVim/LazyVim",
@@ -29,16 +31,6 @@ return {
 
   -- disable trouble
   { "folke/trouble.nvim", enabled = false },
-
-  -- override nvim-cmp and add cmp-emoji
-  {
-    "hrsh7th/nvim-cmp",
-    dependencies = { "hrsh7th/cmp-emoji" },
-    ---@param opts cmp.ConfigSchema
-    opts = function(_, opts)
-      table.insert(opts.sources, { name = "emoji" })
-    end,
-  },
 
   -- change some telescope options and a keymap to browse plugin files
   {
