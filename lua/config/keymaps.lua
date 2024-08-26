@@ -15,4 +15,9 @@ local function map(mode, lhs, rhs, opts)
 end
 
 map("n", "s", ":w<Enter>", { desc = "quicker key to save file" })
-map("n", "r", "<C-r>", { desc = "quicker key to save file" })
+map("n", "r", "<C-r>", { desc = "quicker key redo" })
+
+-- open config file
+vim.api.nvim_set_keymap('n', '<leader>e', ':edit ~/work/nvim/init.lua<CR>', { noremap = true, silent = true })
+
+vim.keymap.set('n', '<leader>ff', function() require("telescope.builtin").find_files({ cwd = vim.fn.getcwd() }) end, { desc = "Find files in cwd" })
