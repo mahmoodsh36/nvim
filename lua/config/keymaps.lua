@@ -21,3 +21,32 @@ map("n", "r", "<C-r>", { desc = "quicker key redo" })
 vim.api.nvim_set_keymap('n', '<leader>e', ':edit ~/work/nvim/init.lua<CR>', { noremap = true, silent = true })
 
 vim.keymap.set('n', '<leader>ff', function() require("telescope.builtin").find_files({ cwd = vim.fn.getcwd() }) end, { desc = "Find files in cwd" })
+
+-- keys to act on buffers
+map("n", "<leader>bk", ":bd<Enter>", { desc = "kill the current buffer" })
+map("n", "<leader>bs", ":Telescope buffers<Enter>", { desc = "switch buffers" })
+
+-- keys to change dir
+map("n", "<leader>dt", ":cd ~/work/nvim/<Enter>", { desc = "cd into the nvim config dir" })
+map("n", "<leader>dh", ":cd ~/<Enter>", { desc = "cd into home" })
+
+-- windows
+map("n", "<leader>w", "<C-w>")
+
+-- more keys
+
+vim.keymap.set('n', '<leader>o',
+	function()
+		vim.cmd([[:source %]])
+		vim.notify('file sourced', vim.log.levels.INFO)
+	end,
+	{ desc = "source current file" })
+
+-- for substitute.nvim
+vim.keymap.set("n", "<leader>s", require('substitute').operator, { noremap = true })
+vim.keymap.set("n", "<leader>ss", require('substitute').line, { noremap = true })
+vim.keymap.set("n", "<leader>S", require('substitute').eol, { noremap = true })
+vim.keymap.set("x", "<leader>s", require('substitute').visual, { noremap = true })
+
+-- run command
+map("n", "<leader><leader>", ":Telescope commands<Enter>")
