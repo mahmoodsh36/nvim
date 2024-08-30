@@ -12,3 +12,10 @@ vim.o.expandtab = true
 
 -- font
 vim.o.guifont = "inconsolata:h13"  -- Set the font and size
+
+vim.opt.listchars = {
+  eol = '↵',
+  trail = '~',
+  tab = '> ',
+  nbsp = '␣'
+}

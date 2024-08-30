@@ -23,7 +23,7 @@ vim.api.nvim_set_keymap('n', '<leader>e', ':edit ~/work/nvim/init.lua<CR>', { no
 vim.keymap.set('n', '<leader>ff', function() require("telescope.builtin").find_files({ cwd = vim.fn.getcwd() }) end, { desc = "Find files in cwd" })
 
 -- keys to act on buffers
-map("n", "<leader>bk", ":bd<Enter>", { desc = "kill the current buffer" })
+map("n", "<leader>bk", ":enew<Enter>", { desc = "kill the current buffer" })
 map("n", "<leader>bs", ":Telescope buffers<Enter>", { desc = "switch buffers" })
 
 -- keys to change dir
