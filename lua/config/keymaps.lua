@@ -50,3 +50,8 @@ vim.keymap.set("x", "<leader>s", require('substitute').visual, { noremap = true 
 
 -- run command
 map("n", "<leader><leader>", ":Telescope commands<Enter>")
+
+-- for lsp commands
+vim.keymap.set("n", "<leader>le", function() vim.diagnostic.open_float(0, {scope="line"}) end, { desc = 'show full error line' })
+vim.keymap.set("n", "<leader>la", function() vim.lsp.buf.code_action() end, { desc = 'lsp code actions' })
+

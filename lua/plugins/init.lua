@@ -404,4 +404,85 @@ return {
       }
     end
   },
+
+  -- remove highlighting after search
+  'romainl/vim-cool',
+
+  -- a collection of utility lua functions
+  -- 'nvim-lua/plenary.nvim',
+
+  'nvim-tree/nvim-web-devicons',
+
+  -- git changes highlighting
+  -- 'lewis6991/gitsigns.nvim',
+
+  -- TUI library
+  -- 'MunifTanjim/nui.nvim',
+
+  -- indent guides
+  'lukas-reineke/indent-blankline.nvim',
+
+  -- set of predefined snippets
+  -- 'rafamadriz/friendly-snippets',
+
+  -- auto insert pairs
+  -- 'windwp/nvim-autopairs',
+
+  -- 
+  'folke/trouble.nvim',
+
+  -- 
+  {
+    'numToStr/Comment.nvim',
+    config = function()
+      require('Comment').setup()
+    end
+  },
+
+  -- code formatting
+  'stevearc/conform.nvim',
+
+  -- improve builtin UIs using fzf, telescope and more
+  'stevearc/dressing.nvim',
+
+  -- 
+  'sindrets/diffview.nvim',
+
+  -- "UI for Neovim notifications and LSP progress messages"
+  'j-hui/fidget.nvim',
+
+  -- tree fs manager
+  'nvim-neo-tree/neo-tree.nvim',
+
+  -- highlight current line
+  'akinsho/bufferline.nvim',
+
+  -- 'onsails/lspkind.nvim'
+
+  -- code navigation with labels
+  'folke/flash.nvim',
+
+  -- reset comment string based on cursor location
+  'JoosepAlviste/nvim-ts-context-commentstring',
+
+  -- code folding
+  'kevinhwang91/nvim-ufo',
+
+  -- magit-like git client
+  'NeogitOrg/neogit',
+
+  -- colorize text representing colors, e.g. #f00
+  'NvChad/nvim-colorizer.lua',
+
+  -- a theme
+  'rebelot/kanagawa.nvim',
+
+  -- generate annotations (code docstrings)
+  {
+    'danymat/neogen',
+    config = true,
+  },
+
+  -- rainbow delimiters
+  'HiPhish/rainbow-delimiters.nvim',
 }

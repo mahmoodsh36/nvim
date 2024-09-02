@@ -10,6 +10,9 @@ vim.o.tabstop = 2
 vim.o.shiftwidth = 2
 vim.o.expandtab = true
 
+-- relative numbers
+vim.wo.relativenumber = true
+
 -- font
 vim.o.guifont = "inconsolata:h13"  -- Set the font and size
 
