@@ -12,10 +12,12 @@ vim.o.expandtab = true
 
 -- relative numbers
 vim.wo.relativenumber = true
+vim.o.number = true
 
 -- font
 vim.o.guifont = "inconsolata:h13"  -- Set the font and size
 
+-- highlight whitespaces
 vim.opt.listchars = {
   eol = '↵',
   trail = '~',
