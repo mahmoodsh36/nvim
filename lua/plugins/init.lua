@@ -128,8 +128,8 @@ return {
   {
     "ellisonleao/gruvbox.nvim",
     config = function()
-      vim.o.background = "dark" -- or "light" for light mode
-      vim.cmd([[colorscheme gruvbox]])
+      -- vim.o.background = "dark" -- or "light" for light mode
+      -- vim.cmd([[colorscheme gruvbox]])
     end,
   },
 
@@ -485,4 +485,24 @@ return {
 
   -- rainbow delimiters
   'HiPhish/rainbow-delimiters.nvim',
+
+  {
+    'mrjones2014/legendary.nvim',
+    -- since legendary.nvim handles all your keymaps/commands,
+    -- its recommended to load legendary.nvim before other plugins
+    priority = 10000,
+    lazy = false,
+    -- sqlite is only needed if you want to use frecency sorting
+    -- dependencies = { 'kkharji/sqlite.lua' }
+  },
+
+  -- pretty good-looking dark theme
+  {
+    "xero/miasma.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      vim.cmd("colorscheme miasma")
+    end,
+  },
 }

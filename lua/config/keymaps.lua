@@ -55,3 +55,5 @@ map("n", "<leader><leader>", ":Telescope commands<Enter>")
 vim.keymap.set("n", "<leader>le", function() vim.diagnostic.open_float(0, {scope="line"}) end, { desc = 'show full error line' })
 vim.keymap.set("n", "<leader>la", function() vim.lsp.buf.code_action() end, { desc = 'lsp code actions' })
 
+-- help
+vim.keymap.set("n", "<leader>hh", function() require("telescope.builtin").help_tags() end, { desc = 'browse help entries' })
