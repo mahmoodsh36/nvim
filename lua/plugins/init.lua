@@ -5,10 +5,10 @@ return {
   -- popup choice list
   {
     "nvim-telescope/telescope.nvim",
-    dependencies = {
-      { "nvim-telescope/telescope-smart-history.nvim" },
-      { "kkharji/sqlite.lua" }, -- required for telescope-smart-history
-    },
+    -- dependencies = {
+    --   { "nvim-telescope/telescope-smart-history.nvim" },
+    --   { "kkharji/sqlite.lua" }, -- required for telescope-smart-history
+    -- },
     config = function()
       require("telescope").setup {
         defaults = {
@@ -17,15 +17,15 @@ return {
             limit = 10000000,
           }
         },
-        extensions = {
-          smart_history = {
-            auto_prompt = true,
-          },
-        },
+        -- extensions = {
+        --   smart_history = {
+        --     auto_prompt = true,
+        --   },
+        -- },
       }
 
       -- load the extension
-      require("telescope").load_extension("smart_history")
+      -- require("telescope").load_extension("smart_history")
     end,
   },
 
