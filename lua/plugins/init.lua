@@ -108,7 +108,7 @@ return {
     'nvim-treesitter/nvim-treesitter-context',
     config = function()
       require'treesitter-context'.setup{
-        enable = true, -- enable this plugin (can be enabled/disabled later via commands)
+        enable = false, -- enable this plugin (can be enabled/disabled later via commands)
         max_lines = 0, -- How many lines the window should span. Values <= 0 mean no limit.
         min_window_height = 0, -- minimum editor window height to enable context. values <= 0 mean no limit.
         line_numbers = true,
@@ -157,15 +157,19 @@ return {
       local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
       -- typescript, javascript
-      lspconfig.ts_ls.setup {
+      vim.lsp.config('ts_ls', {
         capabilities = capabilities,
-      }
+      })
+      vim.lsp.enable({'ts_ls'})
+
       -- lua
-      lspconfig.lua_ls.setup {
+      vim.lsp.config('lua_ls', {
         capabilities = capabilities,
-      }
+      })
+      vim.lsp.enable({'lua_ls'})
+
       -- python
-      lspconfig.pylsp.setup {
+      vim.lsp.config('pylsp', {
         settings = {
           pylsp = {
             plugins = {
@@ -190,7 +194,8 @@ return {
           debounce_text_changes = 200,
         },
         capabilities = capabilities,
-      }
+      })
+      vim.lsp.enable({'pylsp'})
     end
   },
 
