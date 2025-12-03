@@ -17,6 +17,9 @@ vim.o.number = true
 -- font
 vim.o.guifont = "inconsolata:h13"  -- Set the font and size
 
+-- disable persistent undo
+vim.opt.undofile = false
+
 -- highlight whitespaces
 vim.opt.listchars = {
   eol = '↵',
